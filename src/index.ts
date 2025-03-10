@@ -79,7 +79,7 @@ async function startPair(): Promise<void> {
 
     conn.ev.on("creds.update", saveCreds);
     app.get("/", (req, res) => {
-      res.sendFile(path.join(__dirname, "../public/index.html"));
+      res.sendFile(path.join(__dirname, "../public/dashboard.html"));
     });
     app.get("/pair", async (req, res) => {
       let phone = req.query.code as string;
